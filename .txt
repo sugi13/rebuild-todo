@@ -1,0 +1,13 @@
+{form ? (
+        <div className="form" style={{ display: form ? "block" : "none" }}>
+          <input
+            type="text"
+            placeholder="Hello"
+            onChange={(e) => setUserInput(e.target.value)}
+          />
+          <button onClick={FormSubmit}>Submit</button>
+          <button onClick={ToggleForm}>cancel</button>
+        </div>
+      ) : (
+        <button onClick={ToggleForm}>Show Form</button>
+      )}

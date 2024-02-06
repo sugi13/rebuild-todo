@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+
+/*  #D7E950, #FF4500 */
+
+body {
+  background: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-header {
+  display: inherit;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #313131;
+}
+
+.brand h3 {
+  font-size: 2.1rem;
+  font-family: "Honk", system-ui;
+}
+
+.create-btn {
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #FF4500;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.create-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* form */
+.todo-form {
+  background: #ffffff;
+  width: 550px;
+  height: auto;
+  border-radius: 20px;
+  position: absolute;
+  left: 530px;
+  top: 120px;
+  color: black;
+}
+
+.form-header {
+  border-bottom: 1px solid #E7E7E7;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Honk", system-ui;
+  letter-spacing: 2px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+}
+
+.inputs-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #E7E7E7;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  background: none;
+}
+
+label {
+  color: black;
+  font-size: .8rem;
+  position: relative;
+  left: 2px;
+}
+
+textarea {
+  border-radius: 10px;
+  resize: none;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #E7E7E7;
+  width: 95%;
+}
+
+/* form-btn */
+.form-submit-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.Add-task {
+  width: 100px;
+  padding: 10px;
+  background: #131313;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  border-radius: 5px;
+  border: none;
+}
+
+.cancel-btn {
+  border: 1px solid #E7E7E7;
+  width: 100px;
+  font-family: "Inter", sans-serif;
+  background: none;
+  border-radius: 5px;
+}
+
+.Total-time {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-time::before {
+  content: "Start Time - ";
+  color: #8e8e8e;
+}
+
+.End-time::before {
+  content: "End Time - ";
+  color: #8e8e8e;
+}
+
+
+.ApplyOpacity {
+  opacity: .1;
+}
+
+/* show the task */
+.Show-task-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+.task-col{
+  width:  60%;
+  background: rgb(15, 15, 15);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 80px;
+}
+.head-description h1{
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.head-description p{
+  color: #838282;
+  font-size: .9rem;
+}
+#user-date{
+  color:#52c83c;
+  font-size: .8rem;
+  position: relative;
+  left: 2px;;
+}
+#time{
+  padding:5px;
+  border-radius: 5px;
+  font-size: .9rem;
+  color:#666666;
+}
+
+.Task-time{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+#start-end{
+  font-size: .8rem;
+  color:#D7E950;
+}
+
+
+#remove-btn{
+  color:#FF4500;
+  background: #1d1d1d;
+  padding: 9px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .create-btn{
+    width: auto;
+    font-size: .9rem;
+  }
+  #form-wrapper{
+    padding: 2rem;
+  }
+  /* form header */
+  .todo-form {
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+  .Total-time{
+    flex-direction: column;
+  }
+  label{
+    font-size: .92;
+    position: relative;
+    left: 10px;
+  }
+  .task-col{
+    width: 80%;
+    justify-content: space-around;
+  }
+}
